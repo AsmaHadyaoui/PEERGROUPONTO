@@ -1,0 +1,681 @@
+@prefix : <http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#> .
+
+<http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25> rdf:type owl:Ontology ;
+                                                                           owl:imports <http://xmlns.com/foaf/0.1/> .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#achievesLearningOutcome
+:achievesLearningOutcome rdf:type owl:ObjectProperty ,
+                                  owl:FunctionalProperty ,
+                                  owl:AsymmetricProperty ,
+                                  owl:IrreflexiveProperty ;
+                         rdfs:domain :Learner ;
+                         rdfs:range :LearningOutcomes ;
+                         <http://purl.org/dc/elements/1.1/description> "This property indicates that a learner has met specific learning objectives, demonstrating mastery of the required skills or knowledge" ;
+                         rdfs:comment "Denotes the relationship between a learner and a learning outcome that they have successfully achieved" ;
+                         owl:versionInfo "Version 1.2 - Enhanced to reflect its use in learner achievement tracking" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#alignsWithOutcome
+:alignsWithOutcome rdf:type owl:ObjectProperty ,
+                            owl:AsymmetricProperty ,
+                            owl:IrreflexiveProperty ;
+                   rdfs:domain :LearningResources ;
+                   rdfs:range :LearningOutcomes ;
+                   <http://purl.org/dc/elements/1.1/description> "Captures the relationship between learning resources and their associated outcomes, ensuring that all resources are effectively contributing to the predefined educational objectives" ;
+                   rdfs:comment "Indicates the alignment of specific learning resources with intended learning outcomes. This property is used to establish connections between materials and the educational goals they are designed to achieve" ;
+                   owl:versionInfo "Version 1.0 - Initial alignment between resources and outcomes for ontology validation" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#appliesToProject
+:appliesToProject rdf:type owl:ObjectProperty ,
+                           owl:AsymmetricProperty ,
+                           owl:IrreflexiveProperty ;
+                  rdfs:domain :AssessmentCriteria ;
+                  rdfs:range :ProjectBasedLearning ;
+                  <http://purl.org/dc/elements/1.1/description> "Describes the applicability of defined assessment criteria to a particular project, ensuring alignment with learning objectives in a project-based learning framework" ;
+                  rdfs:comment "Indicates the association of specific assessment criteria with a project in the context of project-based learning" ;
+                  owl:versionInfo "Version 1.0 - Initial definition: Establishes the connection between assessment criteria and project activities in collaborative learning environments" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#collaboratesOnProject
+:collaboratesOnProject rdf:type owl:ObjectProperty ,
+                                owl:SymmetricProperty ,
+                                owl:IrreflexiveProperty ;
+                       rdfs:domain :Group ;
+                       rdfs:range :ProjectBasedLearning ;
+                       <http://purl.org/dc/elements/1.1/description> "Indicates group involvement in a project, emphasizing teamwork and mutual contributions" ;
+                       rdfs:comment "Describes the collaborative engagement of a group in a specific project aimed at achieving shared learning outcomes" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#evaluatesCriteria
+:evaluatesCriteria rdf:type owl:ObjectProperty ,
+                            owl:AsymmetricProperty ,
+                            owl:IrreflexiveProperty ;
+                   rdfs:domain :PeerFeedback ;
+                   rdfs:range :AssessmentCriteria ;
+                   <http://purl.org/dc/elements/1.1/description> "This property represents the connection where peer feedback is aligned with established assessment criteria, ensuring that the evaluations are consistent and comprehensive across different projects and learning outcomes" ;
+                   rdfs:comment "Indicates the relationship between peer feedback and the specific assessment criteria used for evaluation. This property links the feedback process with predefined benchmarks to ensure objective and structured assessments" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#formsGroup
+:formsGroup rdf:type owl:ObjectProperty ,
+                     owl:AsymmetricProperty ,
+                     owl:IrreflexiveProperty ;
+            rdfs:domain :IntelligentGroupPairing ;
+            rdfs:range :Group ;
+            <http://purl.org/dc/elements/1.1/description> "Indicates the association between a grouping mechanism or algorithm and the resulting group" ;
+            rdfs:comment "Represents the process by which a group is created or assembled within the intelligent grouping framework" ;
+            owl:versionInfo "Version 1.0 - Initial definition for intelligent group formation" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#hasGroup
+:hasGroup rdf:type owl:ObjectProperty ;
+          owl:inverseOf :isMemberOf ;
+          rdf:type owl:FunctionalProperty ,
+                   owl:AsymmetricProperty ,
+                   owl:IrreflexiveProperty ;
+          rdfs:domain :Learner ;
+          rdfs:range :Group ;
+          <http://purl.org/dc/elements/1.1/description> "This property links a learner to a group they belong to, used to track group memberships in collaborative activitie" ;
+          rdfs:comment "Represents the relationship between a learner and their associated group in collaborative learning" ;
+          owl:versionInfo "Version 1.0 - Initial release: Captures group assignment relationships for learners in collaborative contexts" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#hasLearner
+:hasLearner rdf:type owl:ObjectProperty ,
+                     owl:AsymmetricProperty ,
+                     owl:IrreflexiveProperty ;
+            rdfs:domain :Group ;
+            rdfs:range :Learner ;
+            <http://purl.org/dc/elements/1.1/description> "Specifies the learners associated with a particular group for collaborative learning or assessment purposes" ;
+            rdfs:comment "Defines the relationship between a group and its individual members categorized as learners" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#hasPerformanceMetric
+:hasPerformanceMetric rdf:type owl:ObjectProperty ,
+                               owl:AsymmetricProperty ,
+                               owl:IrreflexiveProperty ;
+                      rdfs:domain :Group ;
+                      rdfs:range :GroupPerformance ;
+                      <http://purl.org/dc/elements/1.1/description> "Defines the measurable criteria or metrics associated with a group's performance evaluation" ;
+                      rdfs:comment "Represents the association of a group with specific performance metrics used to evaluate their effectiveness and outcomes" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#involvesGroup
+:involvesGroup rdf:type owl:ObjectProperty ,
+                        owl:AsymmetricProperty ,
+                        owl:IrreflexiveProperty ;
+               rdfs:domain :CollaborativeLearning ;
+               rdfs:range :Group ;
+               <http://purl.org/dc/elements/1.1/description> "Defines the association between collaborative learning activities and the groups of learners engaged in these activities" ;
+               rdfs:comment "Indicates that a collaborative learning process includes the participation of a specific group" ;
+               owl:versionInfo "Version 1. 0 - Initial definition of the property for associating groups with collaborative learning processes" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#isAchievedThroughProject
+:isAchievedThroughProject rdf:type owl:ObjectProperty ,
+                                   owl:AsymmetricProperty ,
+                                   owl:IrreflexiveProperty ;
+                          rdfs:domain :LearningOutcomes ;
+                          rdfs:range :ProjectBasedLearning ;
+                          <http://purl.org/dc/elements/1.1/description> "This property links learning outcomes with the project-based activities that facilitate their achievement" ;
+                          rdfs:comment "Specifies the relationship where learning outcomes are attained through project-based learning activities" ;
+                          owl:versionInfo "Version 1.1 - Added alignment with project-based learning methodologies" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#isAlignedWithCriteria
+:isAlignedWithCriteria rdf:type owl:ObjectProperty ,
+                                owl:AsymmetricProperty ,
+                                owl:IrreflexiveProperty ;
+                       rdfs:domain :LearningObject ;
+                       rdfs:range :AssessmentCriteria ;
+                       <http://purl.org/dc/elements/1.1/description> "This property establishes a link between a learning object and the criteria it adheres to for assessment purposes" ;
+                       rdfs:comment "Indicates that a learning object aligns with specific assessment criteria, ensuring relevance and consistency" ;
+                       owl:versionInfo "Version 1.1 - Refined to reflect specific alignment purposes in educational contexts" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#isAssessedByCriteria
+:isAssessedByCriteria rdf:type owl:ObjectProperty ,
+                               owl:AsymmetricProperty ,
+                               owl:IrreflexiveProperty ;
+                      rdfs:domain :LearningOutcomes ,
+                                  :ProjectBasedLearning ;
+                      rdfs:range :AssessmentCriteria ;
+                      <http://purl.org/dc/elements/1.1/description> "Links learning outcomes or project-based learning activities to their respective assessment criteria, providing a basis for structured evaluation" ;
+                      rdfs:comment "Denotes the relationship where learning outcomes or projects are evaluated based on specific assessment criteria, ensuring alignment and validity" ;
+                      owl:versionInfo "Version 1.1 - Enhances the linkage between outcomes, projects, and their assessment standards" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#isBasedOnCriteria
+:isBasedOnCriteria rdf:type owl:ObjectProperty ,
+                            owl:AsymmetricProperty ,
+                            owl:IrreflexiveProperty ;
+                   rdfs:domain :IntelligentGroupPairing ;
+                   rdfs:range :Group ;
+                   <http://purl.org/dc/elements/1.1/description> "Represents the association between a grouping process or mechanism and the set of criteria used as its foundation" ;
+                   rdfs:comment "Indicates that the formation or evaluation of a group is guided by specific predefined criteria" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#isEvaluatedThrough
+:isEvaluatedThrough rdf:type owl:ObjectProperty ,
+                             owl:AsymmetricProperty ,
+                             owl:IrreflexiveProperty ;
+                    rdfs:domain :AssessmentCriteria ;
+                    rdfs:range :PeerFeedback ;
+                    <http://purl.org/dc/elements/1.1/description> "This property indicates the evaluation process associated with specific assessment criteria, such as peer feedback or automated metrics" ;
+                    rdfs:comment "Defines the mechanism or process through which assessment criteria are evaluated, often involving feedback or performance metrics" ;
+                    owl:versionInfo "Version 1.0 - Initial definition: Establishes a clear link between assessment criteria and their evaluation mechanisms" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#isInformedByLearnerProfile
+:isInformedByLearnerProfile rdf:type owl:ObjectProperty ,
+                                     owl:FunctionalProperty ,
+                                     owl:AsymmetricProperty ,
+                                     owl:IrreflexiveProperty ;
+                            rdfs:domain :Learner ;
+                            <http://purl.org/dc/elements/1.1/description> "This property indicates the connection between learner-specific profiles and the decisions or actions taken in a personalized learning environment" ;
+                            rdfs:comment "Represents the dependency of a decision or activity on the data captured within a learner's profile" ;
+                            owl:versionInfo "Version 1.1 - Extended to include learner-specific adaptation" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#isLinkedToOutcome
+:isLinkedToOutcome rdf:type owl:ObjectProperty ,
+                            owl:AsymmetricProperty ,
+                            owl:IrreflexiveProperty ;
+                   rdfs:domain :AssessmentCriteria ;
+                   rdfs:range :LearningOutcomes ;
+                   <http://purl.org/dc/elements/1.1/description> "This property establishes the connection between specific assessment criteria and the learning outcomes they aim to measure or achieve" ;
+                   rdfs:comment "Represents the association between assessment criteria and the corresponding learning outcomes they evaluate" ;
+                   owl:versionInfo "Version 1.0 - Initial release: Designed to map assessment criteria to their respective learning outcomes for clear traceability" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#isMemberOf
+:isMemberOf rdf:type owl:ObjectProperty ,
+                     owl:IrreflexiveProperty ;
+            rdfs:domain :Group ;
+            rdfs:range :Learner ;
+            <http://purl.org/dc/elements/1.1/description> "This property identifies the membership connection between a learner and a group, emphasizing the learner's participation or affiliation with the group" ;
+            rdfs:comment "Denotes the relationship where a learner belongs to a specific group" ;
+            owl:versionInfo "Version 1.0 - Initial release: Captures learner-group relationships for collaborative learning contexts" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#isProvidedByLearner
+:isProvidedByLearner rdf:type owl:ObjectProperty ,
+                              owl:FunctionalProperty ,
+                              owl:AsymmetricProperty ,
+                              owl:IrreflexiveProperty ;
+                     rdfs:domain :PeerFeedback ;
+                     rdfs:range :Learner ;
+                     rdfs:comment "Captures the source of peer feedback by associating it with the learner who provided it, thereby facilitating traceability and accountability in the feedback system" ,
+                                  "Indicates that peer feedback originates from a specific learner. This property highlights the contribution of individual learners to the feedback process in collaborative learning settings" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#isRelatedToGroup
+:isRelatedToGroup rdf:type owl:ObjectProperty ,
+                           owl:AsymmetricProperty ,
+                           owl:IrreflexiveProperty ;
+                  rdfs:domain :PeerFeedback ;
+                  rdfs:range :Group ;
+                  <http://purl.org/dc/elements/1.1/description> "Represents the association of peer feedback instances with groups, facilitating analysis of group-based evaluations and ensuring feedback relevance within collaborative settings" ;
+                  rdfs:comment "Defines the relationship where peer feedback is associated with a specific group in the context of collaborative learning. This property establishes the link between the feedback provided and the corresponding group activities or members" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#isSharedAmongGroups
+:isSharedAmongGroups rdf:type owl:ObjectProperty ,
+                              owl:AsymmetricProperty ,
+                              owl:IrreflexiveProperty ;
+                     rdfs:domain :LearningResources ;
+                     rdfs:range :Group ;
+                     <http://purl.org/dc/elements/1.1/description> "Captures the relationship where a single learning resource is utilized collaboratively by different groups, fostering resource efficiency and group interaction" ;
+                     rdfs:comment "Defines the sharing of specific learning resources among multiple groups within a collaborative learning environment" ;
+                     owl:versionInfo "Version 1.0 - Establishes the shared usage of resources in group learning settings" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#isSupportedByResource
+:isSupportedByResource rdf:type owl:ObjectProperty ,
+                                owl:AsymmetricProperty ,
+                                owl:IrreflexiveProperty ;
+                       rdfs:domain :LearningOutcomes ;
+                       rdfs:range :LearningResources ;
+                       <http://purl.org/dc/elements/1.1/description> "Links learning outcomes to the resources that aid or provide support, ensuring access to relevant materials for achieving the outcomes" ;
+                       rdfs:comment "Defines the relationship where learning outcomes are backed or facilitated by specific learning resources" ;
+                       owl:versionInfo "Version 1.2 - Expands on the dependency between learning outcomes and their supporting resources" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#isUsedByLearner
+:isUsedByLearner rdf:type owl:ObjectProperty ,
+                          owl:AsymmetricProperty ,
+                          owl:IrreflexiveProperty ;
+                 rdfs:domain :LearningResources ;
+                 rdfs:range :Learner ;
+                 <http://purl.org/dc/elements/1.1/description> "Captures the interaction between learners and the learning resources they access or utilize to achieve educational goals" ;
+                 rdfs:comment "Denotes the relationship where a specific learning resource is utilized by a learner during the learning process" ;
+                 owl:versionInfo "Version 1.0 - Maps learner usage of resources in various learning activities" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#isUsedInProject
+:isUsedInProject rdf:type owl:ObjectProperty ,
+                          owl:AsymmetricProperty ,
+                          owl:IrreflexiveProperty ;
+                 rdfs:domain :LearningObject ;
+                 rdfs:range :ProjectBasedLearning ;
+                 <http://purl.org/dc/elements/1.1/description> "This property indicates the usage of a learning object in the context of project-based learning tasks, facilitating the alignment of resources with project objectives" ;
+                 rdfs:comment "Specifies that a learning object is utilized within a specific project-based learning activity to achieve educational objectives" ;
+                 owl:versionInfo "Version 1.1 - Updated to clarify its role in project-based learning scenarios" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#optimizesLearningOutcome
+:optimizesLearningOutcome rdf:type owl:ObjectProperty ,
+                                   owl:AsymmetricProperty ,
+                                   owl:IrreflexiveProperty ;
+                          rdfs:domain :IntelligentGroupPairing ;
+                          rdfs:range :LearningOutcomes ;
+                          <http://purl.org/dc/elements/1.1/description> "This property defines how intelligent grouping mechanisms are designed to improve learning results by aligning group characteristics with desired educational outcomes." ;
+                          rdfs:comment "Represents the relationship where an intelligent group pairing process enhances the likelihood of achieving targeted learning outcomes" ;
+                          owl:versionInfo "Version 1.2 - Extended for intelligent group pairing contexts" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#producesLearningOutcome
+:producesLearningOutcome rdf:type owl:ObjectProperty ,
+                                  owl:AsymmetricProperty ,
+                                  owl:IrreflexiveProperty ;
+                         rdfs:domain :CollaborativeLearning ;
+                         rdfs:range :LearningOutcomes ;
+                         <http://purl.org/dc/elements/1.1/description> "Defines the connection between collaborative learning processes and the generation of measurable learning outcomes" ;
+                         rdfs:comment "Relates collaborative activities to their intended learning outcomes" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#providesFeedbackToGroup
+:providesFeedbackToGroup rdf:type owl:ObjectProperty ,
+                                  owl:AsymmetricProperty ,
+                                  owl:IrreflexiveProperty ;
+                         rdfs:domain :Group ;
+                         rdfs:range :PeerFeedback ;
+                         <http://purl.org/dc/elements/1.1/description> "Indicates the feedback mechanism directed toward a group to enhance group learning or performance" ;
+                         rdfs:comment "Describes the action where feedback is provided specifically to a group, supporting collaborative evaluation and learning" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#providesPeerFeedback
+:providesPeerFeedback rdf:type owl:ObjectProperty ,
+                               owl:AsymmetricProperty ,
+                               owl:IrreflexiveProperty ;
+                      rdfs:domain :Learner ;
+                      rdfs:range :PeerFeedback ;
+                      <http://purl.org/dc/elements/1.1/description> "This property identifies the interaction where a learner actively gives constructive feedback to their peers as part of collaborative or reflective learning activities" ;
+                      rdfs:comment "Represents the relationship in which a learner provides feedback on the work or performance of their peers" ;
+                      owl:versionInfo "Version 1.1 - Introduced to enhance peer interaction representation in learning activities" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#supportsLearningOutcome
+:supportsLearningOutcome rdf:type owl:ObjectProperty ,
+                                  owl:AsymmetricProperty ,
+                                  owl:IrreflexiveProperty ;
+                         rdfs:domain :LearningObject ;
+                         rdfs:range :LearningOutcomes ;
+                         <http://purl.org/dc/elements/1.1/description> "This property links learning objects with the learning outcomes they aim to support or enhance" ;
+                         rdfs:comment "Defines the relationship where a learning object provides support in achieving specific learning outcomes" ;
+                         owl:versionInfo "Version 1.2 - Improved alignment with instructional design frameworks" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#usesLearningObject
+:usesLearningObject rdf:type owl:ObjectProperty ,
+                             owl:AsymmetricProperty ,
+                             owl:IrreflexiveProperty ;
+                    rdfs:domain :ProjectBasedLearning ;
+                    rdfs:range :LearningObject ;
+                    <http://purl.org/dc/elements/1.1/description> "This property indicates that a specific project-based learning task incorporates certain learning objects, such as interactive multimedia, documents, or other resources, to support the educational process" ;
+                    rdfs:comment "Defines the relationship between a project-based learning activity and the learning objects utilized within the project to achieve educational objectives" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#usesLearningResources
+:usesLearningResources rdf:type owl:ObjectProperty ,
+                                owl:AsymmetricProperty ,
+                                owl:IrreflexiveProperty ;
+                       rdfs:domain :CollaborativeLearning ,
+                                   :Learner ;
+                       rdfs:range :LearningResources ;
+                       <http://purl.org/dc/elements/1.1/description> "Defines the connection between collaborative learning processes and the generation of measurable learning outcomes." ;
+                       rdfs:comment "Specifies the relationship between a learner or a collaborative learning activity and the educational resources employed to achieve learning objectives. This property emphasizes the utilization of resources in educational activities" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#AccessRights
+:AccessRights rdf:type owl:Class ;
+              rdfs:subClassOf :Security .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Account
+:Account rdf:type owl:Class ;
+         rdfs:subClassOf :Security .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#AssessmentCriteria
+:AssessmentCriteria rdf:type owl:Class ;
+                    <http://purl.org/dc/elements/1.1/description> "This class specifies the parameters and benchmarks for evaluating the effectiveness of collaborative learning activities, including criteria such as creativity, critical thinking, and problem-solving skills" ;
+                    rdfs:comment "Defines the standards or benchmarks used to evaluate learner or group performance" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#BelongsTo
+:BelongsTo rdf:type owl:Class ;
+           rdfs:subClassOf :Relations .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#CollaborativeLearning
+:CollaborativeLearning rdf:type owl:Class ;
+                       <http://purl.org/dc/elements/1.1/description> "This class models learning scenarios where participants engage in group-based activities to achieve shared learning goals. Examples include group discussions, team-based projects, and cooperative problem-solving tasks" ;
+                       rdfs:comment "Represents learning activities that involve group collaboration" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#CommunicationSkills
+:CommunicationSkills rdf:type owl:Class ;
+                     rdfs:subClassOf :LearningOutcomes ;
+                     <http://purl.org/dc/elements/1.1/description> "Communication skills encompass the ability of learners to effectively articulate ideas, share knowledge, and engage in meaningful interactions in various contexts, including group discussions, collaborative projects, and professional settings. These skills are essential for fostering teamwork, resolving conflicts, and conveying critical information in both written and verbal forms" ;
+                     rdfs:comment "This class captures the learning outcomes related to developing and enhancing a learner's capacity for interpersonal communication, presentation delivery, and active listening. It includes both synchronous and asynchronous communication scenarios and supports assessments that evaluate clarity, coherence, and the ability to engage effectively with peers" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Competencies
+:Competencies rdf:type owl:Class ;
+              rdfs:subClassOf :Performance .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#CooperativeProblemSolving
+:CooperativeProblemSolving rdf:type owl:Class ;
+                           rdfs:subClassOf :CollaborativeLearning ;
+                           <http://purl.org/dc/elements/1.1/description> "This class focuses on fostering teamwork and collaboration to address complex problems, leveraging the collective skills and perspectives of group members to achieve shared learning objectives" ;
+                           rdfs:comment "Represents activities where learners collaborate to identify, analyze, and solve problems as a team, emphasizing shared responsibilities and group dynamics" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Creativity
+:Creativity rdf:type owl:Class ;
+            rdfs:subClassOf :AssessmentCriteria ;
+            <http://purl.org/dc/elements/1.1/description> "This class defines a critical assessment criterion focusing on learners' capacity to think divergently and produce original solutions during collaborative projects" ;
+            rdfs:comment "Represents the ability to generate innovative ideas and approaches in collaborative learning activities" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#CriticalThinking
+:CriticalThinking rdf:type owl:Class ;
+                  rdfs:subClassOf :AssessmentCriteria ;
+                  <http://purl.org/dc/elements/1.1/description> "This class emphasizes an essential skill for assessing a learner's ability to evaluate data, arguments, and processes critically to enhance decision-making in collaborative learning environments" ;
+                  rdfs:comment "Represents the ability to analyze information objectively, identify logical relationships, and make reasoned judgments within collaborative learning tasks" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#CurrentPBCL
+:CurrentPBCL rdf:type owl:Class ;
+             rdfs:subClassOf :PortfolioInfo .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#DiversityBasedPairing
+:DiversityBasedPairing rdf:type owl:Class ;
+                       rdfs:subClassOf :IntelligentGroupPairing ;
+                       <http://purl.org/dc/elements/1.1/description> "This class focuses on the creation of diverse groups to maximize learning opportunities by incorporating members with varied skills, backgrounds, or experiences. The diversity-based pairing approach ensures balanced and inclusive group dynamics" ;
+                       rdfs:comment "Defines a pairing strategy that promotes diversity among group members by considering various demographic, academic, or personal attributes" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Group
+:Group rdf:type owl:Class ;
+       <http://purl.org/dc/elements/1.1/description> "This class captures the structure of learning groups, including attributes such as group size, composition, and performance. Groups can be dynamically formed based on specific criteria" ;
+       rdfs:comment "Represents a collection of learners working together in collaborative learning activities" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#GroupDiscussions
+:GroupDiscussions rdf:type owl:Class ;
+                  rdfs:subClassOf :CollaborativeLearning ;
+                  <http://purl.org/dc/elements/1.1/description> "This class focuses on fostering communication, idea exchange, and mutual understanding among learners through organized discussion sessions as part of collaborative learning" ;
+                  rdfs:comment "Represents collaborative activities where group members engage in structured conversations to share ideas, debate topics, and collectively explore solutions" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#GroupInfo
+:GroupInfo rdf:type owl:Class ;
+           rdfs:subClassOf :Group ;
+           <http://purl.org/dc/elements/1.1/description> "This class includes key attributes that define a group's structure and characteristics, such as name, size, and other relevant data for collaborative tasks. It serves as a foundational element for understanding and organizing group dynamics" ;
+           rdfs:comment "Encapsulates metadata and descriptive details about a specific group participating in collaborative learning" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#GroupName
+:GroupName rdf:type owl:Class ;
+           rdfs:subClassOf :GroupInfo .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#GroupPeetTo
+:GroupPeetTo rdf:type owl:Class ;
+             rdfs:subClassOf :GroupRelations ;
+             <http://purl.org/dc/elements/1.1/description> "This class defines the interactions where groups engage with one another as peers, fostering collaboration, mutual support, and exchange of ideas in a learning environment" ;
+             rdfs:comment "Represents peer-to-peer interactions between groups, focusing on collaboration and information exchange" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#GroupPerformance
+:GroupPerformance rdf:type owl:Class ;
+                  rdfs:subClassOf :Group ;
+                  <http://purl.org/dc/elements/1.1/description> "This class tracks the effectiveness and results of a group's collaborative efforts, including qualitative and quantitative performance measures. It is used to evaluate and optimize group-based learning activities" ;
+                  rdfs:comment "Represents the performance metrics and outcomes achieved by a group in collaborative learning settings" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#GroupPresentation
+:GroupPresentation rdf:type owl:Class ;
+                   rdfs:subClassOf :ProjectBasedLearning ;
+                   <http://purl.org/dc/elements/1.1/description> "Group presentations involve collaborative efforts where team members collectively develop and deliver a presentation on a given topic or project. This activity emphasizes teamwork, communication, and knowledge-sharing skills" ;
+                   rdfs:comment "This class represents a key component of project-based learning, focusing on how learners articulate ideas, explain concepts, and demonstrate teamwork in a formal setting. It serves as both a learning process and an assessment tool" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#GroupRelations
+:GroupRelations rdf:type owl:Class ;
+                rdfs:subClassOf :Group ;
+                <http://purl.org/dc/elements/1.1/description> "This class defines the interrelations among groups, including dependencies, collaborations, or hierarchical structures, providing insights into group dynamics and how they influence collaborative learning outcomes" ;
+                rdfs:comment "Describes the relationships and interactions between different groups within a collaborative learning environment" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#GroupSize
+:GroupSize rdf:type owl:Class ;
+           rdfs:subClassOf :GroupInfo .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#IntelligentGroupPairing
+:IntelligentGroupPairing rdf:type owl:Class ;
+                         <http://purl.org/dc/elements/1.1/description> "This class defines mechanisms for pairing learners into groups using data-driven approaches, such as diversity-based or skill-based pairing, to enhance group collaboration and learning outcomes" ;
+                         rdfs:comment "Represents the intelligent formation of learning groups based on predefined criteria" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#InteractiveLearningObjects
+:InteractiveLearningObjects rdf:type owl:Class ;
+                            rdfs:subClassOf :LearningObject ;
+                            <http://purl.org/dc/elements/1.1/description> "Interactive learning objects are educational materials that foster learner participation and engagement by incorporating interactive elements. These objects aim to enhance comprehension and retention through hands-on, exploratory learning experiences" ;
+                            rdfs:comment "Digital resources designed to actively engage learners through interactive features, such as quizzes, simulations, and drag-and-drop activities" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#InterestBasedPairing
+:InterestBasedPairing rdf:type owl:Class ;
+                      rdfs:subClassOf :IntelligentGroupPairing ;
+                      <http://purl.org/dc/elements/1.1/description> "This class ensures that group members are aligned in their areas of interest, facilitating meaningful discussions and promoting deeper involvement in collaborative activities. Interest-based pairing helps create synergy by leveraging mutual enthusiasm and common goals among participants" ;
+                      rdfs:comment "Represents a pairing strategy that groups individuals based on shared interests to enhance engagement and collaboration" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#KnowledgeAcquisition
+:KnowledgeAcquisition rdf:type owl:Class ;
+                      rdfs:subClassOf :LearningOutcomes ;
+                      <http://purl.org/dc/elements/1.1/description> "Knowledge acquisition refers to the process by which learners gather, process, and internalize information, enabling them to build a robust understanding of specific domains or subjects. This outcome is achieved through engaging with various resources, participating in activities, and applying critical thinking to interpret and integrate new information" ;
+                      rdfs:comment "This class focuses on learning outcomes related to the ability to acquire and retain new knowledge. It encompasses cognitive processes such as memorization, comprehension, and application, supporting learners' progression across multiple learning contexts" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Learner
+:Learner rdf:type owl:Class ;
+         <http://purl.org/dc/elements/1.1/description> "This class defines learners, including their attributes such as preferences, competencies, and portfolios. Learners are central to collaborative learning scenarios modeled in the ontology" ;
+         rdfs:comment "Represents an individual participating in collaborative learning activities" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#LearningObject
+:LearningObject rdf:type owl:Class ;
+                <http://purl.org/dc/elements/1.1/description> "This class defines different types of learning materials, such as multimedia objects, text-based resources, and interactive simulations, used in collaborative learning activities" ;
+                rdfs:comment "Represents resources used to facilitate learning" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#LearningOutcomes
+:LearningOutcomes rdf:type owl:Class ;
+                  <http://purl.org/dc/elements/1.1/description> "This class models the intended results of learning activities, including skill acquisition, knowledge improvement, and development of problem-solving and critical thinking skills" ;
+                  rdfs:comment "Defines the goals or results of the learning process" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#LearningResources
+:LearningResources rdf:type owl:Class ;
+                   <http://purl.org/dc/elements/1.1/description> "This class includes resources such as textbooks, online tutorials, and video lectures that support learning activities" ;
+                   rdfs:comment "Represents educational materials utilized in collaborative learning" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#LearningStyle
+:LearningStyle rdf:type owl:Class ;
+               rdfs:subClassOf :Preferences .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#MultimediaLearningObjects
+:MultimediaLearningObjects rdf:type owl:Class ;
+                           rdfs:subClassOf :LearningObject ;
+                           <http://purl.org/dc/elements/1.1/description> "Multimedia learning objects are designed to provide an engaging and enriched learning experience by integrating diverse media formats. These objects aim to cater to various learning styles and enhance the effectiveness of knowledge delivery" ;
+                           rdfs:comment "Learning objects that combine multiple forms of content, such as text, images, audio, and video, to deliver comprehensive educational experiences" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#OnlineTutorials
+:OnlineTutorials rdf:type owl:Class ;
+                 rdfs:subClassOf :LearningResources .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#PeerAssessment
+:PeerAssessment rdf:type owl:Class ;
+                rdfs:subClassOf :PeerFeedback .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#PeerFeedback
+:PeerFeedback rdf:type owl:Class ;
+              <http://purl.org/dc/elements/1.1/description> "This class captures feedback mechanisms where learners evaluate each other's contributions, helping to refine their work and improve learning outcomes" ;
+              rdfs:comment "Represents feedback provided by peers in a collaborative learning environment" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#PeerTo
+:PeerTo rdf:type owl:Class ;
+        rdfs:subClassOf :Relations .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Performance
+:Performance rdf:type owl:Class ;
+             rdfs:subClassOf :Learner ;
+             <http://purl.org/dc/elements/1.1/description> "This class evaluates and tracks a learner's results in terms of assigned learning objectives, project milestones, or task completions. It integrates with assessment criteria to monitor progress and measure effectiveness" ;
+             rdfs:comment "Represents the achievements or outcomes of a learner in collaborative or individual learning tasks, often used as a basis for assessment and feedback" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#PersonalInfo
+:PersonalInfo rdf:type owl:Class ;
+              rdfs:subClassOf :Learner .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#PortfolioInfo
+:PortfolioInfo rdf:type owl:Class ;
+               rdfs:subClassOf :Learner ;
+               <http://purl.org/dc/elements/1.1/description> "This class stores information related to a learner's portfolio, including their progress in ongoing projects (CurrentPBCL) and details of previously completed projects (PreviousPBCL). It enables tracking and assessment of cumulative learning and achievements" ;
+               rdfs:comment "Details about a learner's academic or professional portfolio, encompassing past and current project-based learning experiences" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Preferences
+:Preferences rdf:type owl:Class ;
+             rdfs:subClassOf :Learner ;
+             <http://purl.org/dc/elements/1.1/description> "This class models the preferences of a learner to personalize the learning experience. It includes preferences for group-based tasks, individual assignments, and specific learning methods, enabling adaptive and tailored educational scenarios" ;
+             rdfs:comment "Captures a learner's preferences, including individual learning styles, content delivery methods, and collaboration tendencies" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#PreviousPBCL
+:PreviousPBCL rdf:type owl:Class ;
+              rdfs:subClassOf :PortfolioInfo .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#ProblemSolvingSkills
+:ProblemSolvingSkills rdf:type owl:Class ;
+                      rdfs:subClassOf :LearningOutcomes ;
+                      <http://purl.org/dc/elements/1.1/description> "Problem-solving skills refer to the learner's ability to identify, analyze, and resolve issues effectively. This involves critical thinking, logical reasoning, and the application of theoretical and practical knowledge to develop solutions in diverse contexts" ;
+                      rdfs:comment "This class is designed to represent the outcomes associated with learners' capacity to address challenges systematically and innovatively. It supports activities like case studies, simulations, and collaborative tasks that enhance problem-solving abilities" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#ProjectBasedLearning
+:ProjectBasedLearning rdf:type owl:Class ;
+                      <http://purl.org/dc/elements/1.1/description> "This class models learning scenarios where participants engage in projects such as group presentations, software development tasks, or research-based initiatives" ;
+                      rdfs:comment "Represents learning through structured projects and activities" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Refrences
+:Refrences rdf:type owl:Class ;
+           rdfs:subClassOf :LearningResources .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Relations
+:Relations rdf:type owl:Class ;
+           rdfs:subClassOf :Learner ;
+           <http://purl.org/dc/elements/1.1/description> "This class models the relationships a learner has with other peers, mentors, or group members in collaborative settings. It encompasses both formal group memberships and informal peer connections that influence learning dynamics" ;
+           rdfs:comment "Defines the interpersonal and group connections of a learner within collaborative learning environments" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#ResearchProject
+:ResearchProject rdf:type owl:Class ;
+                 rdfs:subClassOf :ProjectBasedLearning ;
+                 <http://purl.org/dc/elements/1.1/description> "Research projects involve students working on original research within a defined subject area, contributing new knowledge, theories, or solutions. It emphasizes critical thinking, independent research skills, and collaborative problem-solving" ;
+                 rdfs:comment "A research project in an educational context encourages students to explore, analyze, and produce meaningful results in a given field of study. It fosters inquiry, hypothesis testing, and data collection, which are vital skills for advanced learning" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Security
+:Security rdf:type owl:Class ;
+          rdfs:subClassOf :Learner ;
+          <http://purl.org/dc/elements/1.1/description> "Detail the practical purpose of this class in collaborative and adaptive learning scenarios" ;
+          rdfs:comment "Provide a brief and general explanation" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#SkillBasedPairing
+:SkillBasedPairing rdf:type owl:Class ;
+                   rdfs:subClassOf :IntelligentGroupPairing ;
+                   <http://purl.org/dc/elements/1.1/description> "This class facilitates the creation of groups by matching individuals with specific skills, ensuring balanced expertise distribution or fostering mentorship opportunities. It enhances collaborative learning by leveraging members' skills to achieve project goals effectively" ;
+                   rdfs:comment "Represents a pairing strategy where learners are grouped based on complementary or similar skills to optimize collaboration and learning outcomes" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#SoftwareDevelopmentProject
+:SoftwareDevelopmentProject rdf:type owl:Class ;
+                            rdfs:subClassOf :ProjectBasedLearning ;
+                            <http://purl.org/dc/elements/1.1/description> "A software development project focuses on the systematic process of designing, coding, testing, and implementing software applications. It involves problem-solving skills, teamwork, and often a client-based or real-world application goal" ;
+                            rdfs:comment "Software development projects engage learners in all stages of creating a software product, from ideation and design to testing and deployment. These projects help students build programming skills and apply theoretical knowledge in practical scenarios" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#TeamBasedProject
+:TeamBasedProject rdf:type owl:Class ;
+                  rdfs:subClassOf :CollaborativeLearning ;
+                  <http://purl.org/dc/elements/1.1/description> "This class embodies project-based activities where learners collaborate as a team to plan, execute, and deliver projects. These projects emphasize teamwork, problem-solving, and communication skills as part of the collaborative learning process" ;
+                  rdfs:comment "Represents collaborative projects undertaken by a group of learners, focusing on shared goals, distributed tasks, and collective outputs" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#TextBasedLearningObjects
+:TextBasedLearningObjects rdf:type owl:Class ;
+                          rdfs:subClassOf :LearningObject ;
+                          <http://purl.org/dc/elements/1.1/description> "Text-based learning objects focus on delivering information through written text, often supplemented by formatting, bullet points, and illustrations to enhance clarity and retention. These objects are ideal for learners who prefer reading and can adapt to different educational contexts" ;
+                          rdfs:comment "Learning objects that primarily use textual content to facilitate knowledge acquisition and learning" .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Textbooks
+:Textbooks rdf:type owl:Class ;
+           rdfs:subClassOf :LearningResources .
+
+
+###  http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#VideoLectures
+:VideoLectures rdf:type owl:Class ;
+               rdfs:subClassOf :LearningResources .
+
+
+###  http://www.w3.org/2000/10/swap/pim/contact#Person
+<http://www.w3.org/2000/10/swap/pim/contact#Person> rdfs:subClassOf :PersonalInfo .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

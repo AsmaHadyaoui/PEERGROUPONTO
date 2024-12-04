@@ -1,0 +1,957 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#"
+     xml:base="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:wot="http://xmlns.com/wot/0.1/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25">
+        <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#achievesLearningOutcome -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#achievesLearningOutcome">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Learner"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#LearningOutcomes"/>
+        <dc:description>This property indicates that a learner has met specific learning objectives, demonstrating mastery of the required skills or knowledge</dc:description>
+        <rdfs:comment>Denotes the relationship between a learner and a learning outcome that they have successfully achieved</rdfs:comment>
+        <owl:versionInfo>Version 1.2 - Enhanced to reflect its use in learner achievement tracking</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#alignsWithOutcome -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#alignsWithOutcome">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#LearningResources"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#LearningOutcomes"/>
+        <dc:description>Captures the relationship between learning resources and their associated outcomes, ensuring that all resources are effectively contributing to the predefined educational objectives</dc:description>
+        <rdfs:comment>Indicates the alignment of specific learning resources with intended learning outcomes. This property is used to establish connections between materials and the educational goals they are designed to achieve</rdfs:comment>
+        <owl:versionInfo>Version 1.0 - Initial alignment between resources and outcomes for ontology validation</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#appliesToProject -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#appliesToProject">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#AssessmentCriteria"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#ProjectBasedLearning"/>
+        <dc:description>Describes the applicability of defined assessment criteria to a particular project, ensuring alignment with learning objectives in a project-based learning framework</dc:description>
+        <rdfs:comment>Indicates the association of specific assessment criteria with a project in the context of project-based learning</rdfs:comment>
+        <owl:versionInfo>Version 1.0 - Initial definition: Establishes the connection between assessment criteria and project activities in collaborative learning environments</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#collaboratesOnProject -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#collaboratesOnProject">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Group"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#ProjectBasedLearning"/>
+        <dc:description>Indicates group involvement in a project, emphasizing teamwork and mutual contributions</dc:description>
+        <rdfs:comment>Describes the collaborative engagement of a group in a specific project aimed at achieving shared learning outcomes</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#evaluatesCriteria -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#evaluatesCriteria">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#PeerFeedback"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#AssessmentCriteria"/>
+        <dc:description>This property represents the connection where peer feedback is aligned with established assessment criteria, ensuring that the evaluations are consistent and comprehensive across different projects and learning outcomes</dc:description>
+        <rdfs:comment>Indicates the relationship between peer feedback and the specific assessment criteria used for evaluation. This property links the feedback process with predefined benchmarks to ensure objective and structured assessments</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#formsGroup -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#formsGroup">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#IntelligentGroupPairing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Group"/>
+        <dc:description>Indicates the association between a grouping mechanism or algorithm and the resulting group</dc:description>
+        <rdfs:comment>Represents the process by which a group is created or assembled within the intelligent grouping framework</rdfs:comment>
+        <owl:versionInfo>Version 1.0 - Initial definition for intelligent group formation</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#hasGroup -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#hasGroup">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#isMemberOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Learner"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Group"/>
+        <dc:description>This property links a learner to a group they belong to, used to track group memberships in collaborative activitie</dc:description>
+        <rdfs:comment>Represents the relationship between a learner and their associated group in collaborative learning</rdfs:comment>
+        <owl:versionInfo>Version 1.0 - Initial release: Captures group assignment relationships for learners in collaborative contexts</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#hasLearner -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#hasLearner">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Group"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Learner"/>
+        <dc:description>Specifies the learners associated with a particular group for collaborative learning or assessment purposes</dc:description>
+        <rdfs:comment>Defines the relationship between a group and its individual members categorized as learners</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#hasPerformanceMetric -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#hasPerformanceMetric">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Group"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#GroupPerformance"/>
+        <dc:description>Defines the measurable criteria or metrics associated with a group&apos;s performance evaluation</dc:description>
+        <rdfs:comment>Represents the association of a group with specific performance metrics used to evaluate their effectiveness and outcomes</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#involvesGroup -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#involvesGroup">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#CollaborativeLearning"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Group"/>
+        <dc:description>Defines the association between collaborative learning activities and the groups of learners engaged in these activities</dc:description>
+        <rdfs:comment>Indicates that a collaborative learning process includes the participation of a specific group</rdfs:comment>
+        <owl:versionInfo>Version 1. 0 - Initial definition of the property for associating groups with collaborative learning processes</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#isAchievedThroughProject -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#isAchievedThroughProject">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#LearningOutcomes"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#ProjectBasedLearning"/>
+        <dc:description>This property links learning outcomes with the project-based activities that facilitate their achievement</dc:description>
+        <rdfs:comment>Specifies the relationship where learning outcomes are attained through project-based learning activities</rdfs:comment>
+        <owl:versionInfo>Version 1.1 - Added alignment with project-based learning methodologies</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#isAlignedWithCriteria -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#isAlignedWithCriteria">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#LearningObject"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#AssessmentCriteria"/>
+        <dc:description>This property establishes a link between a learning object and the criteria it adheres to for assessment purposes</dc:description>
+        <rdfs:comment>Indicates that a learning object aligns with specific assessment criteria, ensuring relevance and consistency</rdfs:comment>
+        <owl:versionInfo>Version 1.1 - Refined to reflect specific alignment purposes in educational contexts</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#isAssessedByCriteria -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#isAssessedByCriteria">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#LearningOutcomes"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#ProjectBasedLearning"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#AssessmentCriteria"/>
+        <dc:description>Links learning outcomes or project-based learning activities to their respective assessment criteria, providing a basis for structured evaluation</dc:description>
+        <rdfs:comment>Denotes the relationship where learning outcomes or projects are evaluated based on specific assessment criteria, ensuring alignment and validity</rdfs:comment>
+        <owl:versionInfo>Version 1.1 - Enhances the linkage between outcomes, projects, and their assessment standards</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#isBasedOnCriteria -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#isBasedOnCriteria">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#IntelligentGroupPairing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Group"/>
+        <dc:description>Represents the association between a grouping process or mechanism and the set of criteria used as its foundation</dc:description>
+        <rdfs:comment>Indicates that the formation or evaluation of a group is guided by specific predefined criteria</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#isEvaluatedThrough -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#isEvaluatedThrough">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#AssessmentCriteria"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#PeerFeedback"/>
+        <dc:description>This property indicates the evaluation process associated with specific assessment criteria, such as peer feedback or automated metrics</dc:description>
+        <rdfs:comment>Defines the mechanism or process through which assessment criteria are evaluated, often involving feedback or performance metrics</rdfs:comment>
+        <owl:versionInfo>Version 1.0 - Initial definition: Establishes a clear link between assessment criteria and their evaluation mechanisms</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#isInformedByLearnerProfile -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#isInformedByLearnerProfile">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Learner"/>
+        <dc:description>This property indicates the connection between learner-specific profiles and the decisions or actions taken in a personalized learning environment</dc:description>
+        <rdfs:comment>Represents the dependency of a decision or activity on the data captured within a learner&apos;s profile</rdfs:comment>
+        <owl:versionInfo>Version 1.1 - Extended to include learner-specific adaptation</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#isLinkedToOutcome -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#isLinkedToOutcome">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#AssessmentCriteria"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#LearningOutcomes"/>
+        <dc:description>This property establishes the connection between specific assessment criteria and the learning outcomes they aim to measure or achieve</dc:description>
+        <rdfs:comment>Represents the association between assessment criteria and the corresponding learning outcomes they evaluate</rdfs:comment>
+        <owl:versionInfo>Version 1.0 - Initial release: Designed to map assessment criteria to their respective learning outcomes for clear traceability</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#isMemberOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#isMemberOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Group"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Learner"/>
+        <dc:description>This property identifies the membership connection between a learner and a group, emphasizing the learner&apos;s participation or affiliation with the group</dc:description>
+        <rdfs:comment>Denotes the relationship where a learner belongs to a specific group</rdfs:comment>
+        <owl:versionInfo>Version 1.0 - Initial release: Captures learner-group relationships for collaborative learning contexts</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#isProvidedByLearner -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#isProvidedByLearner">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#PeerFeedback"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Learner"/>
+        <rdfs:comment>Captures the source of peer feedback by associating it with the learner who provided it, thereby facilitating traceability and accountability in the feedback system</rdfs:comment>
+        <rdfs:comment>Indicates that peer feedback originates from a specific learner. This property highlights the contribution of individual learners to the feedback process in collaborative learning settings</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#isRelatedToGroup -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#isRelatedToGroup">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#PeerFeedback"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Group"/>
+        <dc:description>Represents the association of peer feedback instances with groups, facilitating analysis of group-based evaluations and ensuring feedback relevance within collaborative settings</dc:description>
+        <rdfs:comment>Defines the relationship where peer feedback is associated with a specific group in the context of collaborative learning. This property establishes the link between the feedback provided and the corresponding group activities or members</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#isSharedAmongGroups -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#isSharedAmongGroups">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#LearningResources"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Group"/>
+        <dc:description>Captures the relationship where a single learning resource is utilized collaboratively by different groups, fostering resource efficiency and group interaction</dc:description>
+        <rdfs:comment>Defines the sharing of specific learning resources among multiple groups within a collaborative learning environment</rdfs:comment>
+        <owl:versionInfo>Version 1.0 - Establishes the shared usage of resources in group learning settings</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#isSupportedByResource -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#isSupportedByResource">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#LearningOutcomes"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#LearningResources"/>
+        <dc:description>Links learning outcomes to the resources that aid or provide support, ensuring access to relevant materials for achieving the outcomes</dc:description>
+        <rdfs:comment>Defines the relationship where learning outcomes are backed or facilitated by specific learning resources</rdfs:comment>
+        <owl:versionInfo>Version 1.2 - Expands on the dependency between learning outcomes and their supporting resources</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#isUsedByLearner -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#isUsedByLearner">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#LearningResources"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Learner"/>
+        <dc:description>Captures the interaction between learners and the learning resources they access or utilize to achieve educational goals</dc:description>
+        <rdfs:comment>Denotes the relationship where a specific learning resource is utilized by a learner during the learning process</rdfs:comment>
+        <owl:versionInfo>Version 1.0 - Maps learner usage of resources in various learning activities</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#isUsedInProject -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#isUsedInProject">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#LearningObject"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#ProjectBasedLearning"/>
+        <dc:description>This property indicates the usage of a learning object in the context of project-based learning tasks, facilitating the alignment of resources with project objectives</dc:description>
+        <rdfs:comment>Specifies that a learning object is utilized within a specific project-based learning activity to achieve educational objectives</rdfs:comment>
+        <owl:versionInfo>Version 1.1 - Updated to clarify its role in project-based learning scenarios</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#optimizesLearningOutcome -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#optimizesLearningOutcome">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#IntelligentGroupPairing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#LearningOutcomes"/>
+        <dc:description>This property defines how intelligent grouping mechanisms are designed to improve learning results by aligning group characteristics with desired educational outcomes.</dc:description>
+        <rdfs:comment>Represents the relationship where an intelligent group pairing process enhances the likelihood of achieving targeted learning outcomes</rdfs:comment>
+        <owl:versionInfo>Version 1.2 - Extended for intelligent group pairing contexts</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#producesLearningOutcome -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#producesLearningOutcome">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#CollaborativeLearning"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#LearningOutcomes"/>
+        <dc:description>Defines the connection between collaborative learning processes and the generation of measurable learning outcomes</dc:description>
+        <rdfs:comment>Relates collaborative activities to their intended learning outcomes</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#providesFeedbackToGroup -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#providesFeedbackToGroup">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Group"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#PeerFeedback"/>
+        <dc:description>Indicates the feedback mechanism directed toward a group to enhance group learning or performance</dc:description>
+        <rdfs:comment>Describes the action where feedback is provided specifically to a group, supporting collaborative evaluation and learning</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#providesPeerFeedback -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#providesPeerFeedback">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Learner"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#PeerFeedback"/>
+        <dc:description>This property identifies the interaction where a learner actively gives constructive feedback to their peers as part of collaborative or reflective learning activities</dc:description>
+        <rdfs:comment>Represents the relationship in which a learner provides feedback on the work or performance of their peers</rdfs:comment>
+        <owl:versionInfo>Version 1.1 - Introduced to enhance peer interaction representation in learning activities</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#supportsLearningOutcome -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#supportsLearningOutcome">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#LearningObject"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#LearningOutcomes"/>
+        <dc:description>This property links learning objects with the learning outcomes they aim to support or enhance</dc:description>
+        <rdfs:comment>Defines the relationship where a learning object provides support in achieving specific learning outcomes</rdfs:comment>
+        <owl:versionInfo>Version 1.2 - Improved alignment with instructional design frameworks</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#usesLearningObject -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#usesLearningObject">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#ProjectBasedLearning"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#LearningObject"/>
+        <dc:description>This property indicates that a specific project-based learning task incorporates certain learning objects, such as interactive multimedia, documents, or other resources, to support the educational process</dc:description>
+        <rdfs:comment>Defines the relationship between a project-based learning activity and the learning objects utilized within the project to achieve educational objectives</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#usesLearningResources -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#usesLearningResources">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#CollaborativeLearning"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Learner"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#LearningResources"/>
+        <dc:description>Defines the connection between collaborative learning processes and the generation of measurable learning outcomes.</dc:description>
+        <rdfs:comment>Specifies the relationship between a learner or a collaborative learning activity and the educational resources employed to achieve learning objectives. This property emphasizes the utilization of resources in educational activities</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#AccessRights -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#AccessRights">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Security"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Account -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Account">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Security"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#AssessmentCriteria -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#AssessmentCriteria">
+        <dc:description>This class specifies the parameters and benchmarks for evaluating the effectiveness of collaborative learning activities, including criteria such as creativity, critical thinking, and problem-solving skills</dc:description>
+        <rdfs:comment>Defines the standards or benchmarks used to evaluate learner or group performance</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#BelongsTo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#BelongsTo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Relations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#CollaborativeLearning -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#CollaborativeLearning">
+        <dc:description>This class models learning scenarios where participants engage in group-based activities to achieve shared learning goals. Examples include group discussions, team-based projects, and cooperative problem-solving tasks</dc:description>
+        <rdfs:comment>Represents learning activities that involve group collaboration</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#CommunicationSkills -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#CommunicationSkills">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#LearningOutcomes"/>
+        <dc:description>Communication skills encompass the ability of learners to effectively articulate ideas, share knowledge, and engage in meaningful interactions in various contexts, including group discussions, collaborative projects, and professional settings. These skills are essential for fostering teamwork, resolving conflicts, and conveying critical information in both written and verbal forms</dc:description>
+        <rdfs:comment>This class captures the learning outcomes related to developing and enhancing a learner&apos;s capacity for interpersonal communication, presentation delivery, and active listening. It includes both synchronous and asynchronous communication scenarios and supports assessments that evaluate clarity, coherence, and the ability to engage effectively with peers</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Competencies -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Competencies">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Performance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#CooperativeProblemSolving -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#CooperativeProblemSolving">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#CollaborativeLearning"/>
+        <dc:description>This class focuses on fostering teamwork and collaboration to address complex problems, leveraging the collective skills and perspectives of group members to achieve shared learning objectives</dc:description>
+        <rdfs:comment>Represents activities where learners collaborate to identify, analyze, and solve problems as a team, emphasizing shared responsibilities and group dynamics</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Creativity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Creativity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#AssessmentCriteria"/>
+        <dc:description>This class defines a critical assessment criterion focusing on learners&apos; capacity to think divergently and produce original solutions during collaborative projects</dc:description>
+        <rdfs:comment>Represents the ability to generate innovative ideas and approaches in collaborative learning activities</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#CriticalThinking -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#CriticalThinking">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#AssessmentCriteria"/>
+        <dc:description>This class emphasizes an essential skill for assessing a learner&apos;s ability to evaluate data, arguments, and processes critically to enhance decision-making in collaborative learning environments</dc:description>
+        <rdfs:comment>Represents the ability to analyze information objectively, identify logical relationships, and make reasoned judgments within collaborative learning tasks</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#CurrentPBCL -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#CurrentPBCL">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#PortfolioInfo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#DiversityBasedPairing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#DiversityBasedPairing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#IntelligentGroupPairing"/>
+        <dc:description>This class focuses on the creation of diverse groups to maximize learning opportunities by incorporating members with varied skills, backgrounds, or experiences. The diversity-based pairing approach ensures balanced and inclusive group dynamics</dc:description>
+        <rdfs:comment>Defines a pairing strategy that promotes diversity among group members by considering various demographic, academic, or personal attributes</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Group -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Group">
+        <dc:description>This class captures the structure of learning groups, including attributes such as group size, composition, and performance. Groups can be dynamically formed based on specific criteria</dc:description>
+        <rdfs:comment>Represents a collection of learners working together in collaborative learning activities</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#GroupDiscussions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#GroupDiscussions">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#CollaborativeLearning"/>
+        <dc:description>This class focuses on fostering communication, idea exchange, and mutual understanding among learners through organized discussion sessions as part of collaborative learning</dc:description>
+        <rdfs:comment>Represents collaborative activities where group members engage in structured conversations to share ideas, debate topics, and collectively explore solutions</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#GroupInfo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#GroupInfo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Group"/>
+        <dc:description>This class includes key attributes that define a group&apos;s structure and characteristics, such as name, size, and other relevant data for collaborative tasks. It serves as a foundational element for understanding and organizing group dynamics</dc:description>
+        <rdfs:comment>Encapsulates metadata and descriptive details about a specific group participating in collaborative learning</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#GroupName -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#GroupName">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#GroupInfo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#GroupPeetTo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#GroupPeetTo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#GroupRelations"/>
+        <dc:description>This class defines the interactions where groups engage with one another as peers, fostering collaboration, mutual support, and exchange of ideas in a learning environment</dc:description>
+        <rdfs:comment>Represents peer-to-peer interactions between groups, focusing on collaboration and information exchange</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#GroupPerformance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#GroupPerformance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Group"/>
+        <dc:description>This class tracks the effectiveness and results of a group&apos;s collaborative efforts, including qualitative and quantitative performance measures. It is used to evaluate and optimize group-based learning activities</dc:description>
+        <rdfs:comment>Represents the performance metrics and outcomes achieved by a group in collaborative learning settings</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#GroupPresentation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#GroupPresentation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#ProjectBasedLearning"/>
+        <dc:description>Group presentations involve collaborative efforts where team members collectively develop and deliver a presentation on a given topic or project. This activity emphasizes teamwork, communication, and knowledge-sharing skills</dc:description>
+        <rdfs:comment>This class represents a key component of project-based learning, focusing on how learners articulate ideas, explain concepts, and demonstrate teamwork in a formal setting. It serves as both a learning process and an assessment tool</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#GroupRelations -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#GroupRelations">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Group"/>
+        <dc:description>This class defines the interrelations among groups, including dependencies, collaborations, or hierarchical structures, providing insights into group dynamics and how they influence collaborative learning outcomes</dc:description>
+        <rdfs:comment>Describes the relationships and interactions between different groups within a collaborative learning environment</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#GroupSize -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#GroupSize">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#GroupInfo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#IntelligentGroupPairing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#IntelligentGroupPairing">
+        <dc:description>This class defines mechanisms for pairing learners into groups using data-driven approaches, such as diversity-based or skill-based pairing, to enhance group collaboration and learning outcomes</dc:description>
+        <rdfs:comment>Represents the intelligent formation of learning groups based on predefined criteria</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#InteractiveLearningObjects -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#InteractiveLearningObjects">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#LearningObject"/>
+        <dc:description>Interactive learning objects are educational materials that foster learner participation and engagement by incorporating interactive elements. These objects aim to enhance comprehension and retention through hands-on, exploratory learning experiences</dc:description>
+        <rdfs:comment>Digital resources designed to actively engage learners through interactive features, such as quizzes, simulations, and drag-and-drop activities</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#InterestBasedPairing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#InterestBasedPairing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#IntelligentGroupPairing"/>
+        <dc:description>This class ensures that group members are aligned in their areas of interest, facilitating meaningful discussions and promoting deeper involvement in collaborative activities. Interest-based pairing helps create synergy by leveraging mutual enthusiasm and common goals among participants</dc:description>
+        <rdfs:comment>Represents a pairing strategy that groups individuals based on shared interests to enhance engagement and collaboration</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#KnowledgeAcquisition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#KnowledgeAcquisition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#LearningOutcomes"/>
+        <dc:description>Knowledge acquisition refers to the process by which learners gather, process, and internalize information, enabling them to build a robust understanding of specific domains or subjects. This outcome is achieved through engaging with various resources, participating in activities, and applying critical thinking to interpret and integrate new information</dc:description>
+        <rdfs:comment>This class focuses on learning outcomes related to the ability to acquire and retain new knowledge. It encompasses cognitive processes such as memorization, comprehension, and application, supporting learners&apos; progression across multiple learning contexts</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Learner -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Learner">
+        <dc:description>This class defines learners, including their attributes such as preferences, competencies, and portfolios. Learners are central to collaborative learning scenarios modeled in the ontology</dc:description>
+        <rdfs:comment>Represents an individual participating in collaborative learning activities</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#LearningObject -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#LearningObject">
+        <dc:description>This class defines different types of learning materials, such as multimedia objects, text-based resources, and interactive simulations, used in collaborative learning activities</dc:description>
+        <rdfs:comment>Represents resources used to facilitate learning</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#LearningOutcomes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#LearningOutcomes">
+        <dc:description>This class models the intended results of learning activities, including skill acquisition, knowledge improvement, and development of problem-solving and critical thinking skills</dc:description>
+        <rdfs:comment>Defines the goals or results of the learning process</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#LearningResources -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#LearningResources">
+        <dc:description>This class includes resources such as textbooks, online tutorials, and video lectures that support learning activities</dc:description>
+        <rdfs:comment>Represents educational materials utilized in collaborative learning</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#LearningStyle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#LearningStyle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Preferences"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#MultimediaLearningObjects -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#MultimediaLearningObjects">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#LearningObject"/>
+        <dc:description>Multimedia learning objects are designed to provide an engaging and enriched learning experience by integrating diverse media formats. These objects aim to cater to various learning styles and enhance the effectiveness of knowledge delivery</dc:description>
+        <rdfs:comment>Learning objects that combine multiple forms of content, such as text, images, audio, and video, to deliver comprehensive educational experiences</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#OnlineTutorials -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#OnlineTutorials">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#LearningResources"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#PeerAssessment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#PeerAssessment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#PeerFeedback"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#PeerFeedback -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#PeerFeedback">
+        <dc:description>This class captures feedback mechanisms where learners evaluate each other&apos;s contributions, helping to refine their work and improve learning outcomes</dc:description>
+        <rdfs:comment>Represents feedback provided by peers in a collaborative learning environment</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#PeerTo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#PeerTo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Relations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Performance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Performance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Learner"/>
+        <dc:description>This class evaluates and tracks a learner&apos;s results in terms of assigned learning objectives, project milestones, or task completions. It integrates with assessment criteria to monitor progress and measure effectiveness</dc:description>
+        <rdfs:comment>Represents the achievements or outcomes of a learner in collaborative or individual learning tasks, often used as a basis for assessment and feedback</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#PersonalInfo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#PersonalInfo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Learner"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#PortfolioInfo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#PortfolioInfo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Learner"/>
+        <dc:description>This class stores information related to a learner&apos;s portfolio, including their progress in ongoing projects (CurrentPBCL) and details of previously completed projects (PreviousPBCL). It enables tracking and assessment of cumulative learning and achievements</dc:description>
+        <rdfs:comment>Details about a learner&apos;s academic or professional portfolio, encompassing past and current project-based learning experiences</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Preferences -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Preferences">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Learner"/>
+        <dc:description>This class models the preferences of a learner to personalize the learning experience. It includes preferences for group-based tasks, individual assignments, and specific learning methods, enabling adaptive and tailored educational scenarios</dc:description>
+        <rdfs:comment>Captures a learner&apos;s preferences, including individual learning styles, content delivery methods, and collaboration tendencies</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#PreviousPBCL -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#PreviousPBCL">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#PortfolioInfo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#ProblemSolvingSkills -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#ProblemSolvingSkills">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#LearningOutcomes"/>
+        <dc:description>Problem-solving skills refer to the learner&apos;s ability to identify, analyze, and resolve issues effectively. This involves critical thinking, logical reasoning, and the application of theoretical and practical knowledge to develop solutions in diverse contexts</dc:description>
+        <rdfs:comment>This class is designed to represent the outcomes associated with learners&apos; capacity to address challenges systematically and innovatively. It supports activities like case studies, simulations, and collaborative tasks that enhance problem-solving abilities</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#ProjectBasedLearning -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#ProjectBasedLearning">
+        <dc:description>This class models learning scenarios where participants engage in projects such as group presentations, software development tasks, or research-based initiatives</dc:description>
+        <rdfs:comment>Represents learning through structured projects and activities</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Refrences -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Refrences">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#LearningResources"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Relations -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Relations">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Learner"/>
+        <dc:description>This class models the relationships a learner has with other peers, mentors, or group members in collaborative settings. It encompasses both formal group memberships and informal peer connections that influence learning dynamics</dc:description>
+        <rdfs:comment>Defines the interpersonal and group connections of a learner within collaborative learning environments</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#ResearchProject -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#ResearchProject">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#ProjectBasedLearning"/>
+        <dc:description>Research projects involve students working on original research within a defined subject area, contributing new knowledge, theories, or solutions. It emphasizes critical thinking, independent research skills, and collaborative problem-solving</dc:description>
+        <rdfs:comment>A research project in an educational context encourages students to explore, analyze, and produce meaningful results in a given field of study. It fosters inquiry, hypothesis testing, and data collection, which are vital skills for advanced learning</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Security -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Security">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Learner"/>
+        <dc:description>Detail the practical purpose of this class in collaborative and adaptive learning scenarios</dc:description>
+        <rdfs:comment>Provide a brief and general explanation</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#SkillBasedPairing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#SkillBasedPairing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#IntelligentGroupPairing"/>
+        <dc:description>This class facilitates the creation of groups by matching individuals with specific skills, ensuring balanced expertise distribution or fostering mentorship opportunities. It enhances collaborative learning by leveraging members&apos; skills to achieve project goals effectively</dc:description>
+        <rdfs:comment>Represents a pairing strategy where learners are grouped based on complementary or similar skills to optimize collaboration and learning outcomes</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#SoftwareDevelopmentProject -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#SoftwareDevelopmentProject">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#ProjectBasedLearning"/>
+        <dc:description>A software development project focuses on the systematic process of designing, coding, testing, and implementing software applications. It involves problem-solving skills, teamwork, and often a client-based or real-world application goal</dc:description>
+        <rdfs:comment>Software development projects engage learners in all stages of creating a software product, from ideation and design to testing and deployment. These projects help students build programming skills and apply theoretical knowledge in practical scenarios</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#TeamBasedProject -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#TeamBasedProject">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#CollaborativeLearning"/>
+        <dc:description>This class embodies project-based activities where learners collaborate as a team to plan, execute, and deliver projects. These projects emphasize teamwork, problem-solving, and communication skills as part of the collaborative learning process</dc:description>
+        <rdfs:comment>Represents collaborative projects undertaken by a group of learners, focusing on shared goals, distributed tasks, and collective outputs</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#TextBasedLearningObjects -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#TextBasedLearningObjects">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#LearningObject"/>
+        <dc:description>Text-based learning objects focus on delivering information through written text, often supplemented by formatting, bullet points, and illustrations to enhance clarity and retention. These objects are ideal for learners who prefer reading and can adapt to different educational contexts</dc:description>
+        <rdfs:comment>Learning objects that primarily use textual content to facilitate knowledge acquisition and learning</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Textbooks -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#Textbooks">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#LearningResources"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#VideoLectures -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#VideoLectures">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#LearningResources"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2000/10/swap/pim/contact#Person -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2000/10/swap/pim/contact#Person">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asmah/ontologies/2023/6/untitled-ontology-25#PersonalInfo"/>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
